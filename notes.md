@@ -158,7 +158,6 @@ module.exports = {
   - add endpoints and models
 
 
------TO DO-----
 ## Initialize knex
 - `knex init`
 
@@ -166,7 +165,7 @@ module.exports = {
 **BEFORE**
 ```js
 module.exports = {
-
+  
   development: {
     client: 'sqlite3',
     connection: {
@@ -179,6 +178,7 @@ module.exports = {
 ## Create a migration
 - `knex migrate:make create_users_table`
 
+  -----TO DO-----
 ## Inside new migration file
 - Create a table however you please
 - Add migration `knex migrate:latest`
