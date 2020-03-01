@@ -14,9 +14,9 @@ router.post('/register', (req, res) => {
         .then(saved => {
             res.status(201).json(saved)
         })
-        .catch(err => {
-            console.log(err)
-            res.status(500).json(err)
+        .catch(({ name, message, stack, code }) => {
+            console.log({ name, message, stack, code })
+            res.status(500).json({ name, message, stack, code })
         });
 });
 

@@ -1,5 +1,4 @@
-const express = require('express');
-const router = express.Router();
+const router = require('express').Router();
 const Users = require('./users-model');
 
 router.get('/', (req, res) => {
@@ -8,8 +7,8 @@ router.get('/', (req, res) => {
         .then(users => {
             res.json(users)
         })
-        .catch(err => {
-            console.log(err)
+        .catch(({ name, message, stack, code }) => {
+            console.log({ name, message, stack, code })
             res.json(500),json(err)
         })
 })

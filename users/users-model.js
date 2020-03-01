@@ -8,7 +8,7 @@ module.exports = {
 }
 
 function get() {
-    return db('users').select('id', 'username');
+    return db('users').select('id', 'username', 'points');
 }
 
 function getBy(filter) {
@@ -22,7 +22,7 @@ function getById(id) {
 }
 
 async function add(user) {
-    const [id] = await db('user').intersect(user)
+    const [id] = await db('users').insert(user)
 
     return getById(id)
 }
