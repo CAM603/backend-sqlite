@@ -17,6 +17,14 @@ router.get('/:id', (req, res) => {
 
 })
 
+router.get('/:id/states', (req, res) => {
+
+})
+
+router.put('/:id/states', (req, res) => {
+
+})
+
 router.put('/:id', (req, res) => {
 
 })

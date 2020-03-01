@@ -9,6 +9,8 @@ exports.up = function(knex) {
 
         table.string('password', 128).notNullable()
 
+        table.text('about')
+
         table.integer('points').notNullable().defaultTo(0)
     })
 };
